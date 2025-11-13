@@ -5,11 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rrar Coffee Shop</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Simple JavaScript popup -->
+  <script>
+    window.onload = function() {
+      alert("☕ Welcome to Rrar Coffee Shop!");
+      // Fade in hero text after alert closes
+      document.querySelector(".hero").classList.add("fade-in");
+    };
+  </script>
 </head>
 <body>
-
-  <!-- Welcome Banner -->
-  <div id="welcome-banner">☕ Welcome to Rrar Coffee Shop!</div>
 
   <!-- Navigation Bar -->
   <header>
@@ -66,6 +72,5 @@
     <p>© 2025 Rrar Coffee Shop | Crafted with ❤️</p>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>

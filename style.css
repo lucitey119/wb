@@ -35,6 +35,13 @@ nav a:hover {
   background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=80') no-repeat center/cover;
   color: white;
   padding: 120px 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 2s ease, transform 1.5s ease;
+}
+.hero.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 .hero h2 {
   font-size: 40px;
@@ -79,26 +86,4 @@ footer {
   color: #fff;
   padding: 20px;
   font-size: 14px;
-}
-
-/* Welcome banner animation */
-#welcome-banner {
-  position: fixed;
-  top: -80px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #4b2e05;
-  color: #fff;
-  padding: 15px 40px;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  transition: top 1s ease, opacity 1s ease;
-  z-index: 1000;
-  opacity: 0;
-}
-#welcome-banner.show {
-  top: 20px;
-  opacity: 1;
 }

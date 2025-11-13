@@ -1,5 +1,5 @@
 function sayHello() {
-  alert("Welcome to My Business Website!");
+  alert("Wecome to My Business Website!");
 }
 
 // Optional: log when page loads

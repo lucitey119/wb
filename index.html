@@ -6,16 +6,36 @@
   <title>Rrar Coffee Shop</title>
   <link rel="stylesheet" href="style.css">
 
-  <!-- Simple JavaScript popup -->
+  <!-- JavaScript for banner and hero fade-in -->
   <script>
-    window.onload = function() {
-      alert("☕ Welcome to Rrar Coffee Shop!");
-      // Fade in hero text after alert closes
-      document.querySelector(".hero").classList.add("fade-in");
-    };
+    window.addEventListener("load", () => {
+      const banner = document.getElementById("welcome-banner");
+      const heroTexts = document.querySelectorAll(".fade-text");
+
+      // Show banner after 2 seconds
+      setTimeout(() => {
+        banner.classList.add("show");
+
+        // Show hero text 0.5s after banner slides in
+        setTimeout(() => {
+          heroTexts.forEach(el => el.classList.add("show-text"));
+        }, 500);
+      }, 2000);
+
+      // Hide banner when OK is clicked
+      document.getElementById("close-banner").addEventListener("click", () => {
+        banner.classList.add("hide");
+      });
+    });
   </script>
 </head>
 <body>
+
+  <!-- Welcome Banner -->
+  <div id="welcome-banner">
+    <span>☕ Welcome to Rrar Coffee Shop!</span>
+    <button id="close-banner">OK</button>
+  </div>
 
   <!-- Navigation Bar -->
   <header>
@@ -30,9 +50,9 @@
 
   <!-- Hero Section -->
   <section id="home" class="hero">
-    <h2>Freshly Brewed Happiness</h2>
-    <p>Discover the finest coffee made with love and passion.</p>
-    <button class="cta-btn">Order Now</button>
+    <h2 class="fade-text">Freshly Brewed Happiness</h2>
+    <p class="fade-text">Discover the finest coffee made with love and passion.</p>
+    <button class="cta-btn fade-text">Order Now</button>
   </section>
 
   <!-- About Section -->

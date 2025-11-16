@@ -5,96 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rrar Coffee Shop</title>
   <link rel="stylesheet" href="style.css">
-
-  <!-- JavaScript for banner and hero fade-in -->
-  <script>
-    window.addEventListener("load", () => {
-      const banner = document.getElementById("welcome-banner");
-      const heroTexts = document.querySelectorAll(".fade-text");
-
-      // Show banner after 2 seconds
-      setTimeout(() => {
-        banner.classList.add("show");
-
-        // Show hero text 0.5s after banner slides in
-        setTimeout(() => {
-          heroTexts.forEach(el => el.classList.add("show-text"));
-        }, 500);
-      }, 2000);
-
-      // Hide banner when OK is clicked
-      document.getElementById("close-banner").addEventListener("click", () => {
-        banner.classList.add("hide");
-      });
-    });
-  </script>
 </head>
 <body>
 
-  <!-- Welcome Banner -->
-  <div id="welcome-banner">
-    <span>☕ Welcome to Rrar Coffee Shop!</span>
-    <button id="close-banner">OK</button>
+  <!-- Welcome Popup -->
+  <div class="welcome" id="welcomeBox">
+    <div class="welcome-content">
+      <h2>☕ Welcome!</h2>
+      <p>Enjoy the finest brews at Rrar Coffee Shop</p>
+      <button id="welcomeBtn">OK</button>
+    </div>
   </div>
 
-  <!-- Navigation Bar -->
   <header>
     <div class="logo">
-  <span class="coffee-icon">☕</span>
-  Rrar <span>Coffee Shop</span>
-</div>
-
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#menu">Menu</a>
-      <a href="#contact">Contact</a>
-    </nav>
+      <span class="coffee-icon">☕</span>
+      Rrar <span>Coffee Shop</span>
+    </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <h2 class="fade-text">Freshly Brewed Happiness</h2>
-    <p class="fade-text">Discover the finest coffee made with love and passion.</p>
-    <button class="cta-btn fade-text">Order Now</button>
+  <section class="hero">
+    <h1>Fresh Coffee, Every Morning</h1>
+    <p>Relax, refresh & enjoy the taste of perfection.</p>
+    <button class="order-btn">Order Now</button>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="about">
-    <h2>About Us</h2>
-    <p>At Rrar Coffee, we believe every cup tells a story. From bean to brew, 
-       we craft perfection to energize your day and warm your soul.</p>
-  </section>
+  <script>
+    // Show welcome after page loads
+    window.onload = function() {
+      setTimeout(() => {
+        document.getElementById("welcomeBox").classList.add("show");
+      }, 2000);
+    };
 
-  <!-- Menu Section -->
-  <section id="menu" class="menu">
-    <h2>Our Menu</h2>
-    <div class="menu-items">
-      <div class="item">
-        <h3>Espresso</h3>
-        <p>Rich and bold — the heart of every coffee.</p>
-      </div>
-      <div class="item">
-        <h3>Cappuccino</h3>
-        <p>Creamy milk foam over a smooth espresso base.</p>
-      </div>
-      <div class="item">
-        <h3>Latte</h3>
-        <p>Silky milk blended with a perfect espresso shot.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p>Email: hello@rrarcoffee.com</p>
-    <p>Instagram: @rrarcoffee</p>
-  </section>
-
-  <footer>
-    <p>© 2025 Rrar Coffee Shop | Crafted with ❤️</p>
-  </footer>
+    // Slide out on button click
+    document.getElementById("welcomeBtn").onclick = function() {
+      document.getElementById("welcomeBox").classList.add("hide");
+    };
+  </script>
 
 </body>
 </html>

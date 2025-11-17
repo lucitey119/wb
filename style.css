@@ -83,7 +83,7 @@ header {
 /* ===== HERO SECTION ===== */
 .hero {
   height: 90vh;
-  /* ✅ Using your uploaded image */
+  /* ✅ Using your uploaded image only */
   background: url('images/976708376469393.jpg') center/cover no-repeat;
   color: var(--light);
   display: flex;

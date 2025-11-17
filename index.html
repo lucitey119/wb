@@ -3,42 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rrar Coffee Shop</title>
+  <title>Bevrea - Refresh Your World</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Welcome Popup -->
+  <!-- 🌟 Welcome Popup -->
   <div class="welcome" id="welcomeBox">
     <div class="welcome-content">
-      <h2>☕ Welcome!</h2>
-      <p>Enjoy the finest brews at Rrar Coffee Shop</p>
-      <button id="welcomeBtn">OK</button>
+      <h2>🍹 Welcome to Bevrea!</h2>
+      <p>Refreshing drinks made for every moment.</p>
+      <button id="welcomeBtn">Explore</button>
     </div>
   </div>
 
+  <!-- 🌟 HEADER + LOGO -->
   <header>
     <div class="logo">
-      <span class="coffee-icon">☕</span>
-      Rrar <span>Coffee Shop</span>
+      <span class="drink-icon">🍹</span>
+      Bevrea
     </div>
   </header>
 
+  <!-- 🌟 HERO Section -->
   <section class="hero">
-    <h1>Fresh Coffee, Every Morning</h1>
-    <p>Relax, refresh & enjoy the taste of perfection.</p>
-    <button class="order-btn">Order Now</button>
+    <h1>Refresh Your World</h1>
+    <p>Discover drinks that boost your mood and energy.</p>
+    <button class="order-btn">Shop Now</button>
   </section>
 
   <script>
-    // Show welcome after page loads
+    // Show popup after page loads
     window.onload = function() {
       setTimeout(() => {
         document.getElementById("welcomeBox").classList.add("show");
       }, 2000);
     };
 
-    // Slide out on button click
+    // Hide popup on click
     document.getElementById("welcomeBtn").onclick = function() {
       document.getElementById("welcomeBox").classList.add("hide");
     };
